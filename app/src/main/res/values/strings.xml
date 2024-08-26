@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">QuizzProgrammerApp</string>
+    <string name="desc_app">Ini adalah aplikasi quiz sederhana, yang digunakan untuk melihat kemampuan peserta didik ataupun dapat digunakan untuk test masuk perusahaan</string>
+    <string name="play">Play</string>
 </resources>
