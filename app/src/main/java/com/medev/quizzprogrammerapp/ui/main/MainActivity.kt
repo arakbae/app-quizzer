@@ -1,5 +1,6 @@
 package com.medev.quizzprogrammerapp.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.medev.quizzprogrammerapp.R
 import com.medev.quizzprogrammerapp.databinding.ActivityMainBinding
+import com.medev.quizzprogrammerapp.ui.prepare.PrepareActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun onClick() {
         mainBinding.btnPlay.setOnClickListener {
-
+            startActivity(Intent(this, PrepareActivity::class.java))
         }
     }
 }
