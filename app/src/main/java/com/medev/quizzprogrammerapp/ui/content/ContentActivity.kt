@@ -1,33 +1,24 @@
-package com.medev.quizzprogrammerapp.ui.main
+package com.medev.quizzprogrammerapp.ui.content
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.medev.quizzprogrammerapp.R
-import com.medev.quizzprogrammerapp.databinding.ActivityMainBinding
-import com.medev.quizzprogrammerapp.ui.prepare.PrepareActivity
+import com.medev.quizzprogrammerapp.databinding.ActivityContentBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var mainBinding: ActivityMainBinding
+class ContentActivity : AppCompatActivity() {
+    private lateinit var contentBinding: ActivityContentBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainBinding = ActivityMainBinding.inflate(layoutInflater)
+        contentBinding = ActivityContentBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-        setContentView(mainBinding.root)
+        setContentView(contentBinding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-        onClick()
-    }
-
-    private fun onClick() {
-        mainBinding.btnPlay.setOnClickListener {
-            startActivity(Intent(this, PrepareActivity::class.java))
         }
     }
 }
