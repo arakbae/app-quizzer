@@ -5,4 +5,5 @@
     <string name="start">Start</string>
     <string name="enter_a_nickname">Enter a Nickname</string>
     <string name="plase_field_your_nickname">Plase field your nickname</string>
+    <string name="default_index">- / -</string>
 </resources>

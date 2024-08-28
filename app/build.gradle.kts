@@ -48,8 +48,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    //Anko
-    implementation("org.jetbrains.anko:anko-commons:0.10.8")
 
     //Gson untuk ubah data json ke objek
     implementation("com.google.code.gson:gson:2.8.6")
