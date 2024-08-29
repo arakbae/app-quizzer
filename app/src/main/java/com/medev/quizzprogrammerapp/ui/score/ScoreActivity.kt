@@ -1,40 +1,37 @@
-package com.medev.quizzprogrammerapp.ui.main
+package com.medev.quizzprogrammerapp.ui.score
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.medev.quizzprogrammerapp.R
-import com.medev.quizzprogrammerapp.databinding.ActivityMainBinding
-import com.medev.quizzprogrammerapp.repository.Repository
+import com.medev.quizzprogrammerapp.databinding.ActivityScoreBinding
+import com.medev.quizzprogrammerapp.ui.main.MainActivity
 import com.medev.quizzprogrammerapp.ui.prepare.PrepareActivity
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var mainBinding: ActivityMainBinding
+class ScoreActivity : AppCompatActivity() {
+
+    private lateinit var scoreBinding: ActivityScoreBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainBinding = ActivityMainBinding.inflate(layoutInflater)
+        scoreBinding = ActivityScoreBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-        setContentView(mainBinding.root)
+        setContentView(scoreBinding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
         onClick()
-        val contents = Repository.getDataContents(this)
-        Log.d("MainActivity", "onCreate:size: ${contents?.size}")
-        Log.d("MainActivity", "onCreate: ${contents?.get(0)?.body}")
-        Log.d("MainActivity", "onCreate: ${contents?.get(0)?.answers?.get(0)?.answer}")
-
     }
 
     private fun onClick() {
-        mainBinding.btnPlay.setOnClickListener {
-            startActivity(Intent(this, PrepareActivity::class.java))
+        scoreBinding.btnDone.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+            // destroy setelah masuk ke mainactivity biar tidak numpuk
+            finishAffinity()
         }
     }
 }

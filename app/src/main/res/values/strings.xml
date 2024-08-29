@@ -7,4 +7,6 @@
     <string name="plase_field_your_nickname">Plase field your nickname</string>
     <string name="default_index">- / -</string>
     <string name="default_text">-</string>
+    <string name="your_score">Your score</string>
+    <string name="done">Done</string>
 </resources>
