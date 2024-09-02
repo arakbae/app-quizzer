@@ -11,7 +11,7 @@ class AnswerAdapter:RecyclerView.Adapter<AnswerAdapter.ViewHolder>() {
 
     private var answers = mutableListOf<Answer>()
 
-    class ViewHolder(private val itemAnswerBinding: ItemAnswerBinding):
+   inner class ViewHolder(private val itemAnswerBinding: ItemAnswerBinding):
         RecyclerView.ViewHolder(itemAnswerBinding.root) {
         fun bindItem(answer: Answer) {
             itemAnswerBinding.tvOption.text = answer.option
@@ -20,6 +20,12 @@ class AnswerAdapter:RecyclerView.Adapter<AnswerAdapter.ViewHolder>() {
                 activeCheckAnswer()
             }else{
                 inActiveCheckAnswer()
+            }
+            itemView.setOnClickListener {
+                for (i in 0 until answers.size){
+                   answers[i].isClick = i == adapterPosition
+                }
+                notifyDataSetChanged()
             }
         }
 

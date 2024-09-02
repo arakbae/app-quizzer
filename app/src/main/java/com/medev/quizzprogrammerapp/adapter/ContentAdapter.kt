@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.medev.quizzprogrammerapp.databinding.ItemContentBinding
+import com.medev.quizzprogrammerapp.model.Answer
 import com.medev.quizzprogrammerapp.model.Content
 
 class ContentAdapter:RecyclerView.Adapter<ContentAdapter.ViewHolder>() {
@@ -15,6 +16,7 @@ class ContentAdapter:RecyclerView.Adapter<ContentAdapter.ViewHolder>() {
     class ViewHolder(private val itemContentBinding: ItemContentBinding)
         :RecyclerView.ViewHolder(itemContentBinding.root) {
         fun bindItem(content: Content) {
+            val answerAdapter = AnswerAdapter()
             itemContentBinding.tvQuiz.text = content.body
             if (content.image != null){
                 itemContentBinding.ivQuiz.visibility = View.VISIBLE
@@ -26,7 +28,11 @@ class ContentAdapter:RecyclerView.Adapter<ContentAdapter.ViewHolder>() {
                 itemContentBinding.ivQuiz.visibility = View.GONE
             }
 
+            if (content.answers != null){
+                answerAdapter.setData(content.answers as MutableList<Answer>)
 
+                itemContentBinding.rvAnswerQuiz.adapter = answerAdapter
+            }
         }
 
     }

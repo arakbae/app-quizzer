@@ -14,7 +14,7 @@ data class Answer(
 	val correctAnswer: Boolean? = null,
 
 	@field:SerializedName("is_click")
-	val isClick: Boolean? = null,
+	var isClick: Boolean? = null,
 
 	@field:SerializedName("option")
 	val option: String? = null
