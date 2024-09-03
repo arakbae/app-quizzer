@@ -1,5 +1,4 @@
 package com.medev.quizzprogrammerapp.ui.content
-
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
