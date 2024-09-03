@@ -1,5 +1,6 @@
 package com.medev.quizzprogrammerapp.ui.prepare
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.medev.quizzprogrammerapp.R
 import com.medev.quizzprogrammerapp.databinding.ActivityPrepareBinding
+import com.medev.quizzprogrammerapp.ui.content.ContentActivity
 
 class PrepareActivity : AppCompatActivity() {
 
@@ -28,7 +30,7 @@ class PrepareActivity : AppCompatActivity() {
         prepareBinding.btnStart.setOnClickListener{
             val nickname = prepareBinding.etNickname.text.toString()
             if(checkValidation(nickname)){
-
+                startActivity(Intent(this, ContentActivity::class.java))
             }
         }
     }
