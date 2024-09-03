@@ -41,7 +41,7 @@ class ContentActivity : AppCompatActivity() {
     }
 
     private fun showDataContens(contents: List<Content>?) {
-        layoutmanager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        layoutmanager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         val snapHelper = PagerSnapHelper()
 
         if (contents != null){

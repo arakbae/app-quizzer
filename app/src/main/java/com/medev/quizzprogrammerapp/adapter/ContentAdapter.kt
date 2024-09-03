@@ -18,7 +18,8 @@ class ContentAdapter:RecyclerView.Adapter<ContentAdapter.ViewHolder>() {
         fun bindItem(content: Content) {
             val answerAdapter = AnswerAdapter()
             itemContentBinding.tvQuiz.text = content.body
-            if (content.image != null){
+
+            if (content.image != null && content.image.isNotEmpty()){
                 itemContentBinding.ivQuiz.visibility = View.VISIBLE
                 Glide.with(itemView)
                     .load(content.image)
@@ -42,14 +43,14 @@ class ContentAdapter:RecyclerView.Adapter<ContentAdapter.ViewHolder>() {
         return ViewHolder(binding)
     }
 
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bindItem(contents[position])
+    }
+
     override fun getItemCount(): Int = contents.size
 
     fun setData(contents:MutableList<Content>){
         this.contents = contents
         notifyDataSetChanged()
-    }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(contents[position])
     }
 }

@@ -44,14 +44,15 @@ class AnswerAdapter:RecyclerView.Adapter<AnswerAdapter.ViewHolder>() {
         return ViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = answers.size
-
-    fun setData(answer: MutableList<Answer>){
-        this.answers = answers
-        notifyDataSetChanged()
-    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(answers[position])
+    }
+
+    override fun getItemCount(): Int = answers.size
+
+    fun setData(answers: MutableList<Answer>){
+        this.answers = answers
+        notifyDataSetChanged()
     }
 }
