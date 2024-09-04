@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.gson.stream.MalformedJsonException
 import com.medev.quizzprogrammerapp.databinding.ItemContentBinding
 import com.medev.quizzprogrammerapp.model.Answer
 import com.medev.quizzprogrammerapp.model.Content
@@ -52,5 +53,9 @@ class ContentAdapter:RecyclerView.Adapter<ContentAdapter.ViewHolder>() {
     fun setData(contents:MutableList<Content>){
         this.contents = contents
         notifyDataSetChanged()
+    }
+
+    fun getResults(): MutableList<Content> {
+        return contents
     }
 }
