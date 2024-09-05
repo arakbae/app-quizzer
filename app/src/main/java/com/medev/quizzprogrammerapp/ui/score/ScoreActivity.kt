@@ -13,6 +13,11 @@ import com.medev.quizzprogrammerapp.ui.prepare.PrepareActivity
 
 class ScoreActivity : AppCompatActivity() {
 
+    companion object{
+        const val EXTRA_SCORE = "extra_score"
+        const val EXTRA_NICKNAME = "extra_nickname"
+    }
+
     private lateinit var scoreBinding: ActivityScoreBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

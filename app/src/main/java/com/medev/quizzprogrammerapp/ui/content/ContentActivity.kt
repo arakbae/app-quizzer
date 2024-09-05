@@ -1,6 +1,8 @@
 package com.medev.quizzprogrammerapp.ui.content
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -12,6 +14,8 @@ import com.medev.quizzprogrammerapp.adapter.ContentAdapter
 import com.medev.quizzprogrammerapp.databinding.ActivityContentBinding
 import com.medev.quizzprogrammerapp.model.Content
 import com.medev.quizzprogrammerapp.repository.Repository
+import com.medev.quizzprogrammerapp.ui.main.MainActivity
+import com.medev.quizzprogrammerapp.ui.score.ScoreActivity
 
 class ContentActivity : AppCompatActivity() {
 
@@ -56,6 +60,62 @@ class ContentActivity : AppCompatActivity() {
             val contents = Repository.getDataContents(this)
             //Show data
             showDataContens(contents)
+        }
+
+        //On Click
+        onClick()
+    }
+
+    private fun onClick() {
+        contentBinding.btnBack.setOnClickListener{
+            AlertDialog.Builder(this)
+                .setTitle(getString(R.string.are_you_sure))
+                .setMessage(getString(R.string.message_exit))
+                .setPositiveButton(getString(R.string.yes)){ dialog, _->
+                    dialog.dismiss()
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finishAffinity()
+                }
+                .setNegativeButton(getString(R.string.no)){ dialog, _->
+                    dialog.dismiss()
+                }
+                .show()
+        }
+        contentBinding.btnNextContent.setOnClickListener{
+            if (currentPosition < dataSize - 1 ){
+                contentBinding.rvContent.smoothScrollToPosition(currentPosition + 1)
+            }else{
+                AlertDialog.Builder(this)
+                    .setTitle(getString(R.string.are_you_sure))
+                    .setMessage(getString(R.string.message_input))
+                    .setPositiveButton(getString(R.string.yes)){dialog,_->
+                        val contents = contentAdapter.getResults()
+                        val totalQuiz = contents.size
+                        var totalCorrectAnswer = 0
+
+                        for (content in contents){
+                            for (answer in content.answers!!){
+                                if (answer.correctAnswer == true && answer.isClick == true){
+                                    totalCorrectAnswer += 1
+                                }
+                            }
+                        }
+                        val totalScore = totalCorrectAnswer.toDouble() / totalQuiz * 100
+                        val intent = Intent(this, ScoreActivity::class.java)
+                        intent.putExtra(ScoreActivity.EXTRA_NICKNAME, nickname)
+                        intent.putExtra(ScoreActivity.EXTRA_SCORE, totalScore.toInt())
+                        startActivity(intent)
+
+                        dialog.dismiss()
+                      }
+                    .setNegativeButton(getString(R.string.no)){dialog,_->
+                        dialog.dismiss()
+                    }
+                    .show()
+            }
+        }
+        contentBinding.btnPrevContent.setOnClickListener{
+            contentBinding.rvContent.smoothScrollToPosition(currentPosition - 1)
         }
     }
 
