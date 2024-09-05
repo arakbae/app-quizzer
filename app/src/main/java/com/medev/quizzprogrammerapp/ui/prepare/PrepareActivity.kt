@@ -29,8 +29,10 @@ class PrepareActivity : AppCompatActivity() {
     private fun onClick() {
         prepareBinding.btnStart.setOnClickListener{
             val nickname = prepareBinding.etNickname.text.toString()
-            if(checkValidation(nickname)){
-                startActivity(Intent(this, ContentActivity::class.java))
+            if (checkValidation(nickname)) {
+                val intent = Intent(this, ContentActivity::class.java)
+                intent.putExtra(ContentActivity.EXTRA_NICKNAME, nickname)
+                startActivity(intent)
             }
         }
     }

@@ -29,6 +29,13 @@ class ScoreActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        //Get data
+        if(intent != null){
+            val score = intent.getIntExtra(EXTRA_SCORE, 0)
+            val nickname = intent.getStringExtra(EXTRA_NICKNAME)
+            scoreBinding.tvNickname.text = nickname
+            scoreBinding.tvScore.text = score.toString()
+        }
         onClick()
     }
 
@@ -38,5 +45,11 @@ class ScoreActivity : AppCompatActivity() {
             // destroy setelah masuk ke mainactivity biar tidak numpuk
             finishAffinity()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this,MainActivity::class.java))
+        finishAffinity()
     }
 }

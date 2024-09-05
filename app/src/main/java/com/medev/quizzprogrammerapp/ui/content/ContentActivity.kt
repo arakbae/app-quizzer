@@ -60,10 +60,27 @@ class ContentActivity : AppCompatActivity() {
             val contents = Repository.getDataContents(this)
             //Show data
             showDataContens(contents)
-        }
 
-        //On Click
+            //On Click
+
+        }
         onClick()
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.are_you_sure))
+            .setMessage(getString(R.string.message_exit))
+            .setPositiveButton(getString(R.string.yes)){ dialog, _->
+                dialog.dismiss()
+                startActivity(Intent(this, MainActivity::class.java))
+                finishAffinity()
+                super.onBackPressed()
+            }
+            .setNegativeButton(getString(R.string.no)){ dialog, _->
+                dialog.dismiss()
+            }
+            .show()
     }
 
     private fun onClick() {
