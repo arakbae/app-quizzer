@@ -1,29 +1,29 @@
 {
   "contents": [
     {
-      "body": "1. Jawablah pertanyaan ini..",
+      "body": "1. Apa yang dimaksud dengan pajak penghasilan (PPh)?",
       "image": "",
       "answers": [
         {
-          "answer": "tidak",
-          "correct_answer": false,
+          "answer": "Pajak yang dikenakan atas penghasilan orang pribadi dan badan",
+          "correct_answer": true,
           "is_click": false,
           "option": "A"
         },
         {
-          "answer": "iya",
-          "correct_answer": true,
+          "answer": "Pajak atas transaksi jual beli barang",
+          "correct_answer": false,
           "is_click": false,
           "option": "B"
         },
         {
-          "answer": "tidak",
+          "answer": "Pajak atas impor barang",
           "correct_answer": false,
           "is_click": false,
           "option": "C"
         },
         {
-          "answer": "tidak",
+          "answer": "Pajak atas kepemilikan tanah",
           "correct_answer": false,
           "is_click": false,
           "option": "D"
@@ -31,29 +31,29 @@
       ]
     },
     {
-      "body": "2. Jawablah pertanyaan ini..",
+      "body": "2. Siapakah yang wajib membayar pajak di Indonesia?",
       "image": "",
       "answers": [
         {
-          "answer": "tidak",
+          "answer": "Setiap warga negara yang bekerja",
           "correct_answer": false,
           "is_click": false,
           "option": "A"
         },
         {
-          "answer": "iya",
+          "answer": "Setiap orang pribadi atau badan yang memperoleh penghasilan",
           "correct_answer": true,
           "is_click": false,
           "option": "B"
         },
         {
-          "answer": "tidak",
+          "answer": "Hanya badan usaha yang memiliki cabang",
           "correct_answer": false,
           "is_click": false,
           "option": "C"
         },
         {
-          "answer": "tidak",
+          "answer": "Orang asing yang tinggal di Indonesia",
           "correct_answer": false,
           "is_click": false,
           "option": "D"
@@ -61,29 +61,29 @@
       ]
     },
     {
-      "body": "3. Jawablah pertanyaan ini..",
+      "body": "3. Apa itu PPN (Pajak Pertambahan Nilai)?",
       "image": "",
       "answers": [
         {
-          "answer": "tidak",
-          "correct_answer": false,
+          "answer": "Pajak atas nilai barang saat transaksi terjadi",
+          "correct_answer": true,
           "is_click": false,
           "option": "A"
         },
         {
-          "answer": "iya",
-          "correct_answer": true,
+          "answer": "Pajak atas kepemilikan tanah",
+          "correct_answer": false,
           "is_click": false,
           "option": "B"
         },
         {
-          "answer": "tidak",
+          "answer": "Pajak yang dikenakan pada barang ekspor",
           "correct_answer": false,
           "is_click": false,
           "option": "C"
         },
         {
-          "answer": "tidak",
+          "answer": "Pajak untuk mendanai pertambangan",
           "correct_answer": false,
           "is_click": false,
           "option": "D"
@@ -91,29 +91,29 @@
       ]
     },
     {
-      "body": "4. Jawablah pertanyaan ini..",
+      "body": "4. Pajak daerah biasanya digunakan untuk kepentingan apa?",
       "image": "",
       "answers": [
         {
-          "answer": "tidak",
-          "correct_answer": false,
+          "answer": "Untuk membiayai proyek infrastruktur daerah",
+          "correct_answer": true,
           "is_click": false,
           "option": "A"
         },
         {
-          "answer": "iya",
-          "correct_answer": true,
+          "answer": "Untuk menambah pemasukan perusahaan",
+          "correct_answer": false,
           "is_click": false,
           "option": "B"
         },
         {
-          "answer": "tidak",
+          "answer": "Untuk membiayai program kementerian pusat",
           "correct_answer": false,
           "is_click": false,
           "option": "C"
         },
         {
-          "answer": "tidak",
+          "answer": "Untuk menggaji pegawai perusahaan swasta",
           "correct_answer": false,
           "is_click": false,
           "option": "D"
@@ -121,29 +121,179 @@
       ]
     },
     {
-      "body": "5. Jawablah pertanyaan ini..",
+      "body": "5. Apa yang dimaksud dengan pajak langsung?",
       "image": "",
       "answers": [
         {
-          "answer": "tidak",
-          "correct_answer": false,
+          "answer": "Pajak yang dibayarkan langsung oleh wajib pajak kepada pemerintah",
+          "correct_answer": true,
           "is_click": false,
           "option": "A"
         },
         {
-          "answer": "iya",
-          "correct_answer": true,
+          "answer": "Pajak yang ditambahkan pada harga barang",
+          "correct_answer": false,
           "is_click": false,
           "option": "B"
         },
         {
-          "answer": "tidak",
+          "answer": "Pajak yang hanya berlaku di luar negeri",
           "correct_answer": false,
           "is_click": false,
           "option": "C"
         },
         {
-          "answer": "tidak",
+          "answer": "Pajak yang dibayarkan oleh perusahaan saja",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "D"
+        }
+      ]
+    },
+    {
+      "body": "6. Apa yang dimaksud dengan pajak tidak langsung?",
+      "image": "",
+      "answers": [
+        {
+          "answer": "Pajak yang dipungut dari barang atau jasa yang dibeli",
+          "correct_answer": true,
+          "is_click": false,
+          "option": "A"
+        },
+        {
+          "answer": "Pajak yang dibayarkan oleh individu secara langsung",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "B"
+        },
+        {
+          "answer": "Pajak atas penghasilan",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "C"
+        },
+        {
+          "answer": "Pajak yang hanya dikenakan pada warga negara",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "D"
+        }
+      ]
+    },
+    {
+      "body": "7. Siapa yang menetapkan tarif pajak di Indonesia?",
+      "image": "",
+      "answers": [
+        {
+          "answer": "Presiden",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "A"
+        },
+        {
+          "answer": "Direktorat Jenderal Pajak",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "B"
+        },
+        {
+          "answer": "Pemerintah dan DPR",
+          "correct_answer": true,
+          "is_click": false,
+          "option": "C"
+        },
+        {
+          "answer": "Mahkamah Agung",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "D"
+        }
+      ]
+    },
+    {
+      "body": "8. Apa tujuan dari penerapan pajak progresif?",
+      "image": "",
+      "answers": [
+        {
+          "answer": "Untuk meningkatkan kesejahteraan orang kaya",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "A"
+        },
+        {
+          "answer": "Untuk meningkatkan penerimaan negara dari mereka yang berpenghasilan tinggi",
+          "correct_answer": true,
+          "is_click": false,
+          "option": "B"
+        },
+        {
+          "answer": "Untuk mengurangi pengeluaran pemerintah",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "C"
+        },
+        {
+          "answer": "Untuk menambah keuntungan perusahaan",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "D"
+        }
+      ]
+    },
+    {
+      "body": "9. Kapan wajib pajak diharuskan melaporkan SPT Tahunan?",
+      "image": "",
+      "answers": [
+        {
+          "answer": "Setiap awal bulan",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "A"
+        },
+        {
+          "answer": "Setiap akhir tahun",
+          "correct_answer": true,
+          "is_click": false,
+          "option": "B"
+        },
+        {
+          "answer": "Setiap tiga bulan sekali",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "C"
+        },
+        {
+          "answer": "Setiap minggu pertama bulan April",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "D"
+        }
+      ]
+    },
+    {
+      "body": "10. Apa yang dimaksud dengan pajak final?",
+      "image": "",
+      "answers": [
+        {
+          "answer": "Pajak yang jumlahnya tetap dan tidak berubah",
+          "correct_answer": true,
+          "is_click": false,
+          "option": "A"
+        },
+        {
+          "answer": "Pajak yang dibayarkan oleh pemerintah",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "B"
+        },
+        {
+          "answer": "Pajak yang harus dibayar oleh pihak ketiga",
+          "correct_answer": false,
+          "is_click": false,
+          "option": "C"
+        },
+        {
+          "answer": "Pajak yang dikenakan hanya untuk perusahaan besar",
           "correct_answer": false,
           "is_click": false,
           "option": "D"
